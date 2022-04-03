@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Google" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-04-03T13:37:28" hostname="DESKTOP-714KNQG" time="12.722">
+  <properties/>
+  <testcase name="Go to Google" classname="Google" time="12.722">
+    <failure message="org.junit.ComparisonFailure: expected:&lt;MST Connect - Home[]&gt; but was:&lt;MST Connect - Home[ | Facebook]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;MST Connect - Home[]&gt; but was:&lt;MST Connect - Home[ | Facebook]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at steps.MyStepDefs.theGoogleSearchShouldBeDisplayed(MyStepDefs.java:41)
+	at ✽.the google search should be displayed(file:///C:/Users/Admin/IdeaProjects/Test/src/test/resources/Google.feature:6)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+Scenario: Go to Google                       # src/test/resources/Google.feature:2
+  Given I redirect to google page            # steps.MyStepDefs.iRedirect()
+
+  When I enter "google"                      # steps.MyStepDefs.iEnter(java.lang.String)
+  And I click search                         # steps.MyStepDefs.iClickSearch()
+  Then the google search should be displayed # steps.MyStepDefs.theGoogleSearchShouldBeDisplayed()
+      org.junit.ComparisonFailure: expected:<MST Connect - Home[]> but was:<MST Connect - Home[ | Facebook]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at steps.MyStepDefs.theGoogleSearchShouldBeDisplayed(MyStepDefs.java:41)
+	at âœ½.the google search should be displayed(file:///C:/Users/Admin/IdeaProjects/Test/src/test/resources/Google.feature:6)
+
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 12117
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Apr 03, 2022 9:37:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
